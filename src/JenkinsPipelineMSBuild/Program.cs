@@ -10,6 +10,7 @@ namespace JenkinsPipelineMSBuild
 	{
 		static void Main(string[] args)
 		{
+			var x = Dapper.CommandDefinition();
 		}
 	}
 }
