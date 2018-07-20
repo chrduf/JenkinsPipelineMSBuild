@@ -53,6 +53,7 @@ pipeline {
   }
 
   post {
+    /* 
     success {
   	  mail to: "${params.mailto_on_success}",
            subject:  "Suceeded:  ${currentBuild.fullDisplayName}",
@@ -63,6 +64,7 @@ pipeline {
            subject: "Failed: ${currentBuild.fullDisplayName}",
            body: "Build failed ${env.BUILD_URL} ${env.JOB_NAME} ${env.BUILD_NUMBER}"
     }
+	*/
   }
   
 }
