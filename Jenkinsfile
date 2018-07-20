@@ -23,28 +23,29 @@ pipeline {
         bat 'BuildAll.bat'
       }
     }
+
     stage('Unit Tests') {
       steps {
-          echo 'Completed unit tests'
-        }
+        echo 'Completed unit tests'
       }
     }
+
     stage('Create Nuget packages') {
       steps{
 		echo "Created Nuget packages in folder ${WORKSPACE}\\NugetPackages"
       }
     }
-    stage('Publish') {
+    
+	stage('Publish') {
       steps {
-		echo "Created Nuget packages in folder ${WORKSPACE}\\NugetPackages"
+		echo "Created Nuget packages in folder ${WORKSPACE}\\Publish"
       }
     }
 
     stage('Archive') {
       steps {
         archiveArtifacts allowEmptyArchive: true, artifacts: 'TestResults\\**'
-        archiveArtifacts allowEmptyArchive: true, artifacts: 'Publish\\ConsoleService\\**'
-        archiveArtifacts allowEmptyArchive: true, artifacts: 'Publish\\WindowsService\\**'
+        archiveArtifacts allowEmptyArchive: true, artifacts: 'Publish\\**'
 		archiveArtifacts allowEmptyArchive: true, artifacts: 'NugetPackages\\**'
       }
     }
