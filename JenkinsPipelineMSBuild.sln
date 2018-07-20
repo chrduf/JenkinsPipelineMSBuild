@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JenkinsPipelineMSBuild", "JenkinsPipelineMSBuild\JenkinsPipelineMSBuild.csproj", "{40FA6454-091E-4835-B4EE-5A0DC865FBCF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B53E26D0-A904-4DD6-B306-67B6BC9F4AE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JenkinsPipelineMSBuild", "src\JenkinsPipelineMSBuild\JenkinsPipelineMSBuild.csproj", "{40FA6454-091E-4835-B4EE-5A0DC865FBCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F647073A-4F2E-47A2-A0D8-8DA4F5371150}"
+	ProjectSection(SolutionItems) = preProject
+		BuildAll.bat = BuildAll.bat
+		ClearWS.bat = ClearWS.bat
+		Jenkinsfile = Jenkinsfile
+		NuGet.config = NuGet.config
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +29,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40FA6454-091E-4835-B4EE-5A0DC865FBCF} = {B53E26D0-A904-4DD6-B306-67B6BC9F4AE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F5BC4C56-8434-4C21-B706-2A5F3211453B}
