@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace JenkinsPipelineMSBuild
 {
@@ -10,7 +6,7 @@ namespace JenkinsPipelineMSBuild
 	{
 		static void Main(string[] args)
 		{
-			var x = Dapper.CommandDefinition();
+			var x = new List<string>();
 		}
 	}
 }
